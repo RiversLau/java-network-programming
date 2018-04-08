@@ -14,11 +14,11 @@ import java.nio.channels.WritableByteChannel;
  */
 public class ChargenClient {
 
-    private static int DEFAULT_PORT = 19;
+    private static int DEFAULT_PORT = 1919;
 
     public static void main(String[] args) {
         try {
-            SocketAddress address = new InetSocketAddress("rama.poly.edu", DEFAULT_PORT);
+            SocketAddress address = new InetSocketAddress("localhost", DEFAULT_PORT);
             SocketChannel client = SocketChannel.open(address);
             client.configureBlocking(false);
             ByteBuffer buffer = ByteBuffer.allocate(1024);
